@@ -5,5 +5,17 @@ export default {
   theme: {
     extend: {}
   },
-  plugins: []
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.border-gray': {
+          borderRadius: '4px',
+          borderWidth: '1px',
+          borderColor: '#9ca3af'
+        }
+      }
+
+      addUtilities(newUtilities)
+    }
+  ]
 }
